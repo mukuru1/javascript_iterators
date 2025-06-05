@@ -3,7 +3,16 @@ function listNames(songs) {
   songs.forEach(song => console.log(song.name));
 }
 console.log(listNames(songs));
+
+
 // Write a function called listSongDetails which takes in an array of songs and console.logs details about each one. The details should be in the following example format: "Smooth, by Santana featuring Rob Thomas (4:00)".
+
+function listSongDetails(songs) {
+  songs.forEach(song => {
+    console.log(`${song.name}, by ${song.artist} (${song.duration})`);
+  });
+}
+
 
 // Write a function called summerJamCount which takes in an array of songs and returns the number of songs which hit #1 on the charts in June, July, or August.
 
