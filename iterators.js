@@ -58,6 +58,13 @@ console.log(getMainArtists(songs));
 
 // Write a function called getBigHits which takes an array of songs and returns an array of songs which were number one for 10 or more weeks.
 
+function getBigHits(songs) {
+  return songs.filter(song => song.numberOneWeeks >= 10);
+}
+
+console.log(getBigHits(songs));
+
+
 // Write a function called getShortSongs which takes an array of songs and returns an array of songs which shorter than 3 minutes.
 
 // Write a function called getSongsByArtist which takes in an array of artists and the name of an artist and returns an array of songs by that artist.
