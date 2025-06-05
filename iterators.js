@@ -1,3 +1,36 @@
+const songs = [
+  {
+    name: 'chuchill Downs',
+    artist: 'Drake Ft Jack Harlow ',
+    duration: "4:00",
+    month: "August",
+    numberOneWeeks: 12
+  },
+  {
+    name: 'Not Like Us',
+    artist: 'Kendrick Lamal',
+    duration: "3:48",
+    month: "May",
+    numberOneWeeks: 7
+  },
+  {
+    name: "Old Town Road",
+    artist: "Lil Nas X featuring Billy Ray Cyrus",
+    duration: "2:37",
+    month: "June",
+    numberOneWeeks: 19
+  },
+  {
+    name: 'Free Mind',
+    artist: 'Tems',
+    duration: "3:10",
+    month: "October",
+    numberOneWeeks: 9
+  }
+];
+
+
+
 // Write a function called listNames which takes in an array of songs and console.logs the name of each one.
 function listNames(songs) {
   songs.forEach(song => console.log(song.name));
