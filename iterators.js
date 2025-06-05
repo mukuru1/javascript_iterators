@@ -48,6 +48,14 @@ console.log(getDurationInSeconds(songs));
 
 // Write a function called getMainArtists which takes in an array of songs and returns an array of the primary artists on the recordings. If there's only one artist, that artist should be returned; if there are featured artists, they should be ignored (so only the artist to the left of "featuring" is kept.)
 
+function getMainArtists(songs) {
+  return songs.map(song => song.artist.split(" featuring")[0].trim());
+}
+
+console.log(getMainArtists(songs));
+
+
+
 // Write a function called getBigHits which takes an array of songs and returns an array of songs which were number one for 10 or more weeks.
 
 // Write a function called getShortSongs which takes an array of songs and returns an array of songs which shorter than 3 minutes.
