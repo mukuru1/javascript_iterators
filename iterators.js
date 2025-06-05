@@ -26,6 +26,14 @@ console.log(summerJamCount(songs));
 
 // Write a function called getDurations which takes in an array of songs and returns an array of each song's duration.
 
+function getDurations(songs) {
+  return songs.map(song => song.duration);
+}
+
+console.log(getDurations(songs));
+
+
+
 // Write a function called getDurationInSeconds which takes in an array of songs and returns an array of each song's duration in seconds.
 
 // Write a function called getMainArtists which takes in an array of songs and returns an array of the primary artists on the recordings. If there's only one artist, that artist should be returned; if there are featured artists, they should be ignored (so only the artist to the left of "featuring" is kept.)
