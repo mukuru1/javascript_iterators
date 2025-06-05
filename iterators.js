@@ -115,6 +115,18 @@ console.log(getTotalDurationInSeconds(songs));
 
 // Write a function called getSongCountByArtist which takes in an array of songs and returns an object. The keys in the object should be artist names, and the values should be the number of songs by that artist in the orignal array.
 
+function getSongCountByArtist(songs) {
+  return songs.reduce((acc, song) => {
+    const artist = song.artist.split(" featuring")[0].trim();
+    acc[artist] = (acc[artist] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+console.log(getSongCountByArtist(songs));
+
+
+
 // Write a function called averageWeeksAtNumberOne which takes in an array of songs and returns the average number of weeks that songs on the list were #1.
 
 
