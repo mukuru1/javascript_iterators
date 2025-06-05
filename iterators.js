@@ -102,6 +102,17 @@ console.log(summerJamCountReduce(songs));
 
 // Write a function called getTotalDurationInSeconds which takes in an array of songs and returns the total amount of time (in seconds) it would take to listen to all of the songs. (Hint: can you use anything you've written already to help solve this problem?)
 
+function getTotalDurationInSeconds(songs) {
+  return songs.reduce((total, song) => {
+    const [min, sec] = song.duration.split(":").map(Number);
+    return total + min * 60 + sec;
+  }, 0);
+}
+
+console.log(getTotalDurationInSeconds(songs));
+
+
+
 // Write a function called getSongCountByArtist which takes in an array of songs and returns an object. The keys in the object should be artist names, and the values should be the number of songs by that artist in the orignal array.
 
 // Write a function called averageWeeksAtNumberOne which takes in an array of songs and returns the average number of weeks that songs on the list were #1.
