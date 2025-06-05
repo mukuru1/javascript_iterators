@@ -13,8 +13,16 @@ function listSongDetails(songs) {
   });
 }
 
+listSongDetails(songs);
 
 // Write a function called summerJamCount which takes in an array of songs and returns the number of songs which hit #1 on the charts in June, July, or August.
+
+function summerJamCount(songs) {
+  return songs.filter(song => ["June", "July", "August"].includes(song.month)).length;
+}
+
+console.log(summerJamCount(songs));
+
 
 // Write a function called getDurations which takes in an array of songs and returns an array of each song's duration.
 
