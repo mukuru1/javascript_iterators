@@ -67,6 +67,17 @@ console.log(getBigHits(songs));
 
 // Write a function called getShortSongs which takes an array of songs and returns an array of songs which shorter than 3 minutes.
 
+function getShortSongs(songs) {
+  return songs.filter(song => {
+    const [min, sec] = song.duration.split(":").map(Number);
+    return (min * 60 + sec) < 180;
+  });
+}
+
+console.log(getShortSongs(songs));
+
+
+
 // Write a function called getSongsByArtist which takes in an array of artists and the name of an artist and returns an array of songs by that artist.
 
 // Refactor summerJamCount to use reduce!
