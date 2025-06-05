@@ -33,8 +33,18 @@ function getDurations(songs) {
 console.log(getDurations(songs));
 
 
-
 // Write a function called getDurationInSeconds which takes in an array of songs and returns an array of each song's duration in seconds.
+
+function getDurationInSeconds(songs) {
+  return songs.map(song => {
+    const [min, sec] = song.duration.split(":").map(Number);
+    return min * 60 + sec;
+  });
+}
+
+console.log(getDurationInSeconds(songs));
+
+
 
 // Write a function called getMainArtists which takes in an array of songs and returns an array of the primary artists on the recordings. If there's only one artist, that artist should be returned; if there are featured artists, they should be ignored (so only the artist to the left of "featuring" is kept.)
 
